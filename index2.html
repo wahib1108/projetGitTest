@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>mdp</h1>
+    <p id="message">Entrez un mot de passe ci dessous :</p>
+    <form action="">
+        <input type="password" id="motDePasse" onkeyup="evalueLongueur()" >
+    </form>
+    <script>
+       function evalueLongueur(){
+           let motDePasse = document.getElementById("motDePasse").value;
+           if (motDePasse.length >= 8){
+               document.getElementById("message").innerHTML = "Longueur MDP acceptable";
+           }
+           else{
+               document.getElementById("message").innerHTML = "Mot de passe trop cours";
+           }
+       } 
+    </script>
+
+</body>
+</html>
